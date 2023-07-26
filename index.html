@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Guessing Game 2</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rubik:ital@1&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="container">
+      <section class="top">
+        <h1>Number Guessing Game</h1>
+        <p>
+          We have selected a random number between 1 and 100. See if you can
+          guess it in 5 turns or fewer. We'll tell you if your guess was too
+          high or too low.
+        </p>
+      </section>
+      <form class="mid">
+        <h2>Enter a guess:</h2>
+        <input
+          type="number"
+          placeholder="enter your guess"
+          required
+          min="1"
+          max="100"
+        />
+        <button type="submit">submit guess</button>
+      </form>
+      <div class="result"></div>
+      <button
+        class="restart"
+        value="Refresh Page"
+        onClick="window.location.reload();"
+      >
+        Restart
+      </button>
+      <section class="last">
+        <div>
+          <ul>
+            <li>Guesses so far: <span class="far"></span></li>
+            <li>Remaining guesses: <span class="remain"></span></li>
+            <li>Your guesses: <span class="guesses"></span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
